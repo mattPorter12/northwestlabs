@@ -1,6 +1,7 @@
 import React from 'react'
 import * as bs from 'react-bootstrap'
-import { Switch } from 'react-router-dom'
+import './App.scss'
+
 
 function Home(props) {
     return (

@@ -1,0 +1,16 @@
+$primary: #004876;
+$secondary: #6c7277;
+$success: #10713d;
+$warning: #8c5c03;
+$danger: #9E2821;
+$light: #f8f9fa;
+
+h1 {
+    color: $secondary
+}
+Nav.Link {
+    color: $light
+}
+
+@import '~bootstrap/scss/bootstrap'
+

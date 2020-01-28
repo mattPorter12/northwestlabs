@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowswerRouter as Router, Route, Switch  } from "react-router-dom"
+import { BrowserRouter as Router, Route, Switch  } from "react-router-dom"
 import * as bs from 'react-bootstrap' /*this should be rare */
 import HeaderContainer from './header-container'
 import LeftContainer from './left-container'
@@ -14,7 +14,7 @@ function App(props) {
     <Router>
       <bs.Container fluid className="p-0 min-vh-100 d-flex flex-column">
         <bs.Row noGutters className="flex-grow-0 flex-shrink-0 shadow-sm">
-          <bs.Col className="px-3 py-2" style={{ backgroundColor: "#121C1C" }} >
+          <bs.Col className="px-3 py-2" style={{ backgroundColor: "#282828" }} >
             <HeaderContainer />
           </bs.Col>
         </bs.Row>
@@ -36,11 +36,13 @@ function App(props) {
             </Switch>
           </bs.Col>
         </bs.Row> 
+        
         <bs.Row noGutters className="flex-grow-0 flex-shrink-0 shadow-sm">
           <bs.Col className="px-3 py-2" style={{ backgroundColor: "#121C1C" }} >
             <Home />
           </bs.Col>
         </bs.Row>
+        
         <bs.Row noGutters className="flex-grow-0 flex-shrink-0 shadow-sm">
           <bs.Col className="px-3 py-2" style={{ backgroundColor: "#121C1C" }} >
             <RightContainer />
@@ -50,7 +52,8 @@ function App(props) {
           <bs.Col className="px-3 py-2" style={{ backgroundColor: "#121C1C" }} >
             <FooterContainer />
           </bs.Col>
-        </bs.Row>
+        </bs.Row> 
+          
       </bs.Container>
     </Router>
   )
