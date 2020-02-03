@@ -14,46 +14,36 @@ function App(props) {
     <Router>
       <bs.Container fluid className="p-0 min-vh-100 d-flex flex-column">
         <bs.Row noGutters className="flex-grow-0 flex-shrink-0 shadow-sm">
-          <bs.Col className="px-3 py-2" style={{ backgroundColor: "#282828" }} >
+          <bs.Col className="px-3 py-2" style={{ backgroundColor: "#d3d3d3" }} >
             <HeaderContainer />
           </bs.Col>
         </bs.Row>
         <bs.Row noGutters className="flex-grow-1">
-          <bs.Col md='2' className="px-3 py-4 shadow" style={{ backgroundColor: "#99CCCC" }}>
-            <LeftContainer />
+          <bs.Col md='2' className="px-3 py-4 shadow" style={{ backgroundColor: "#99CCfC" }}>
+            <LeftContainer /> 
           </bs.Col>
-          <bs.Col md='8'>
-            <Switch>
-              <Route path='/about'>
-                <About />
+          <bs.Col md ='8' className="px-3 py-2" style={{ backgroundColor: "#121C1C" }} >
+           <Switch>
+              <Route exact path='/about'>
+                <About /> 
               </Route>
-              <Route path='/help'>
+              <Route exact path='/help'>
                 <Help />
               </Route>
-              <Route path='/'>
-                <Home />
+              <Route exact path='/'>
+                <Home /> 
               </Route>
             </Switch>
           </bs.Col>
-        </bs.Row> 
-        
-        <bs.Row noGutters className="flex-grow-0 flex-shrink-0 shadow-sm">
-          <bs.Col className="px-3 py-2" style={{ backgroundColor: "#121C1C" }} >
-            <Home />
-          </bs.Col>
-        </bs.Row>
-        
-        <bs.Row noGutters className="flex-grow-0 flex-shrink-0 shadow-sm">
-          <bs.Col className="px-3 py-2" style={{ backgroundColor: "#121C1C" }} >
+          <bs.Col md='2' className="px-3 py-2" style={{ backgroundColor: "#99CCCC" }} >
             <RightContainer />
           </bs.Col>
         </bs.Row>
         <bs.Row noGutters className="flex-grow-0 flex-shrink-0 shadow-sm">
-          <bs.Col className="px-3 py-2" style={{ backgroundColor: "#121C1C" }} >
+          <bs.Col className="px-3 py-2" style={{ backgroundColor: "pink" }} >
             <FooterContainer />
           </bs.Col>
         </bs.Row> 
-          
       </bs.Container>
     </Router>
   )

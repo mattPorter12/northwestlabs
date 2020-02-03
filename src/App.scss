@@ -6,10 +6,23 @@ $danger: #9E2821;
 $light: #f8f9fa;
 
 h1 {
+    color: $success
+}
+.microscope {
+    font-size: 3rem
+}
+.i {
+    text-align: center;
+}
+
+ul img {
+    width: 8rem;
+}
+p {
     color: $secondary
 }
-Nav.Link {
-    color: $light
+nav.navbar {
+    background-color: #d3d3d3;
 }
 
 @import '~bootstrap/scss/bootstrap'
