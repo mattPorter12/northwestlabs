@@ -12,17 +12,17 @@ import RightContainer from './right-container'
 function App(props) {
   return (
     <Router>
-      <bs.Container fluid className="p-0 min-vh-100 d-flex flex-column">
+      <bs.Container fluid className="p-0 min-vh-100 d-flex flex-column ">
         <bs.Row noGutters className="flex-grow-0 flex-shrink-0 shadow-sm">
-          <bs.Col className="px-3 py-2" style={{ backgroundColor: "#d3d3d3" }} >
+          <bs.Col className="px-3 py-2 border-bottom border-info" style={{ backgroundColor: "white" }} >
             <HeaderContainer />
           </bs.Col>
         </bs.Row>
         <bs.Row noGutters className="flex-grow-1">
-          <bs.Col md='2' className="px-3 py-4 shadow" style={{ backgroundColor: "#99CCfC" }}>
+          <bs.Col md='2' className="border-right border-info px-3 py-4 shadow" style={{ backgroundColor: "white" }}>
             <LeftContainer /> 
           </bs.Col>
-          <bs.Col md ='8' className="px-3 py-2" style={{ backgroundColor: "#121C1C" }} >
+          <bs.Col md ='8' className="px-3 py-2" style={{ backgroundColor: "white" }} >
            <Switch>
               <Route exact path='/about'>
                 <About /> 
@@ -35,12 +35,12 @@ function App(props) {
               </Route>
             </Switch>
           </bs.Col>
-          <bs.Col md='2' className="px-3 py-2" style={{ backgroundColor: "#99CCCC" }} >
+          <bs.Col md='2' className="border-left border-info px-3 py-2" style={{ backgroundColor: "white" }} >
             <RightContainer />
           </bs.Col>
         </bs.Row>
         <bs.Row noGutters className="flex-grow-0 flex-shrink-0 shadow-sm">
-          <bs.Col className="px-3 py-2" style={{ backgroundColor: "pink" }} >
+          <bs.Col className="border-top border-info px-3 py-2" style={{ backgroundColor: "white" }} >
             <FooterContainer />
           </bs.Col>
         </bs.Row> 

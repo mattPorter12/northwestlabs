@@ -9,7 +9,7 @@ function RightContainer(props) {
         <bs.Container>
             <bs.Row>
                 <h2>Recent:</h2>
-                <ul>
+                {/* <ul>
                     <li>
                         Melamine
                     </li>
@@ -22,7 +22,7 @@ function RightContainer(props) {
                         Nephthalene
                     </li>
                     <img src="https://www.chemservice.com/media/product/structures/n-12645.jpg"></img>
-                </ul>
+                </ul> */}
             </bs.Row>
         </bs.Container>
     )

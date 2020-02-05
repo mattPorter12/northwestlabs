@@ -5,7 +5,7 @@ import SiteIcon from './SiteIcon.ico'
 import './App.scss'
 function HeaderContainer(props) {
     return (
-        <bs.Navbar  expand="lg">
+        < bs.Navbar  expand="lg" >
             <Link to="/">
                 <bs.Navbar.Brand >
                     <img alt="Site Icon" src= {SiteIcon}/>
@@ -14,10 +14,10 @@ function HeaderContainer(props) {
             </Link>
                 <bs.Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <bs.Navbar.Collapse id="basic-navbar-nav">
-                <bs.Nav className="mr-auto">
-                    {/* <Link to='/' className="nav-link">Home</Link>
+                <bs.Nav>
+                    <Link to='/' className="nav-link">Home</Link>
                     <Link to='/about' className="nav-link">About</Link>
-                    <Link to='help' className="nav-link">Help</Link> */}
+                    <Link to='help' className="nav-link">Help</Link> 
                 </bs.Nav>
                 <bs.Nav>
                     <bs.NavDropdown title="Welcome, Matt" id="basic-nav-dropdown" alignRight>
