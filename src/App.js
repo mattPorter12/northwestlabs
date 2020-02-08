@@ -27,7 +27,7 @@ function App(props) {
               <Route exact path='/about'>
                 <About /> 
               </Route>
-              <Route exact path='/help'>
+              <Route  path='/product'>
                 <Help />
               </Route>
               <Route exact path='/'>
