@@ -1,6 +1,5 @@
 
 import React from 'react'
-import * as bs from 'react-bootstrap'
 import { Link } from "react-router-dom"
 import PRODUCTS from './products'
 import './App.scss'
@@ -9,23 +8,22 @@ export default function LeftContainer(props) {
     
    let categories = {}
     
-    const process_categories = Object.values(PRODUCTS).map((product) => {
+    Object.values(PRODUCTS).map((product) => {
         let curr_category = product.category
         
         if (categories[curr_category] == null)
             categories[curr_category] = 1;
         else
             categories[curr_category] = categories[curr_category]+1;
-            
-            
-
+        return true
     })
     
-    let myLinks = []
+    
+    let myLinks = [<Link to="/"  key="all" className="nav-link">{"All products" } ({Object.values(PRODUCTS).length})</Link>]
     for (let [category, count] of Object.entries(categories))
     {
-        
-        let curr_link = <Link className="nav-link">{category } ({count})</Link>
+        let key = 'left' + myLinks.length;
+        let curr_link = <Link to={"/category/" +category} key={key} className="nav-link">{category } ({count})</Link>
         myLinks.push(curr_link)
     
     }

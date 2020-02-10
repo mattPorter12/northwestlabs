@@ -1,0 +1,22 @@
+class ImageIndex extends React.Component {
+    constructor() {
+      super();
+  
+      // Define the initial state:
+      this.state = {
+        ImgIdx: 1
+      };
+
+      
+        }
+      ChangeColor = (idx) => {
+        this.ImgIdx = idx
+      }
+
+      render() {
+        <img  src={"/products/" + product.filename + "-" +ImgIdx+ ".png" } style={{float: "right", position:"relative", }}></img>
+      }
+  
+  }
+
+  export default ImageIndex

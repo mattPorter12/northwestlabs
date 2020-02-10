@@ -8,6 +8,7 @@ import Home from './home'
 import Help from './help'
 import About from './about'
 import RightContainer from './right-container'
+import Details from './details'
 
 function App(props) {
   return (
@@ -27,11 +28,17 @@ function App(props) {
               <Route exact path='/about'>
                 <About /> 
               </Route>
-              <Route  path='/product'>
+              <Route  path='/help'>
                 <Help />
               </Route>
               <Route exact path='/'>
                 <Home /> 
+              </Route>
+              <Route path='/category/:category'>
+                <Home /> 
+              </Route>
+              <Route path='/product/:id'>
+                <Details />
               </Route>
             </Switch>
           </bs.Col>

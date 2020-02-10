@@ -1,6 +1,6 @@
 import React from 'react'
 import * as bs from 'react-bootstrap'
-import { Switch } from 'react-router-dom'
+
 
 function Help(props) {
     return (
@@ -9,7 +9,7 @@ function Help(props) {
             <bs.Col>
             
                 <div className="text-center mt-5">
-                    <img style={{width: "50%"}} src="https://miro.medium.com/max/2100/1*BgPLcocaAsS0AH2fEWlNmA.png"></img>
+                    <img alt="question marks"style={{width: "50%"}} src="https://miro.medium.com/max/2100/1*BgPLcocaAsS0AH2fEWlNmA.png"></img>
                 </div>
                 <h1 className="text-center mt-5">Questions?  </h1>
                 <p>Consequat eiusmod dolore mollit magna et ea eiusmod et sunt. Occaecat officia veniam velit duis Lorem eu sint aliqua ipsum voluptate. Laborum officia laboris ut culpa enim sint proident officia commodo voluptate. Dolor eu officia eiusmod deserunt cupidatat.

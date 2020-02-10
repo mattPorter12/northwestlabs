@@ -9,7 +9,7 @@ function HeaderContainer(props) {
             <Link to="/">
                 <bs.Navbar.Brand >
                     <img alt="Site Icon" src= {SiteIcon}/>
-                    Northwest Labs
+                    <strong>  Arctic Key</strong>
                 </bs.Navbar.Brand>
             </Link>
                 <bs.Navbar.Toggle aria-controls="basic-navbar-nav" />
