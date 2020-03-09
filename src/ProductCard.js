@@ -1,11 +1,13 @@
 import React from 'react'
 import * as bs from 'react-bootstrap'
 
+
 import { Link } from 'react-router-dom'
 
 export default function ProductCard(props) {
 
     let p = props.product
+    
     return (
         
         <bs.Card  className = "text-center p-3" >

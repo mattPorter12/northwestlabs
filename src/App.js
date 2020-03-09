@@ -31,9 +31,9 @@ function App(props) {
               <Route  path='/help'>
                 <Help />
               </Route>
-              <Route exact path='/'>
-                <Home /> 
-              </Route>
+               <Route exact path='/'>
+                  <Home /> 
+                </Route>
               <Route path='/category/:category'>
                 <Home /> 
               </Route>

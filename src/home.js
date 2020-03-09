@@ -1,40 +1,41 @@
-import React from 'react'
-import * as bs from 'react-bootstrap'
-import './App.scss'
-import './products'
-import {  useParams } from "react-router-dom";
-import ProductCard from './ProductCard'
-import PRODUCTS from './products'
+import React from "react";
+import * as bs from "react-bootstrap";
+import "./App.scss";
+import "./products";
+import { useParams } from "react-router-dom";
+import ProductCard from "./ProductCard";
+import AppContext from "./context";
+
 
 
 export default function Home(props) {
-  let Product_Values  = Object.values(PRODUCTS);
+  const state = React.useContext(AppContext);
+  let Product_Values = Object.values(state.products);
 
-  let {category} = useParams()
-  function filter(p)
-  {
-    return p.category === category || category == null;
+
+  function getCategoryNameFromId(id) {
+    /* eslint-disable-next-line */
+    return state.categories.filter((c) => c.id == id)[0].title;
   }
 
-  Product_Values = Product_Values.filter(filter);
+  let { category } = useParams();
 
-  function processOneValue(p, i)
-  {
-      return (
-          
-          <bs.Col md ="3" key={p.id}>
-            <ProductCard product= {p}  />
+
+  Product_Values = Product_Values.filter(
+    p => { 
+      return getCategoryNameFromId(p.category) === category || category == null}
+  );
+
+
+  return (
+    <bs.Container>
+      <bs.Row>
+        {Product_Values.map(p => (
+          <bs.Col md="3" key={p.id}>
+            <ProductCard product={p} />
           </bs.Col>
-          
-      )
-  }
-  let cards = Product_Values.map(processOneValue);
-
-  return ( 
-    <bs.Container >
-      <bs.Row> 
-        {cards}
-      </bs.Row> 
+        ))}
+      </bs.Row>
     </bs.Container>
-  )
+  );
 }
