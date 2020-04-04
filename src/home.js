@@ -1,7 +1,6 @@
 import React from "react";
 import * as bs from "react-bootstrap";
 import "./App.scss";
-import "./products";
 import { useParams } from "react-router-dom";
 import ProductCard from "./ProductCard";
 import AppContext from "./context";

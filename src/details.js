@@ -1,19 +1,17 @@
 import React from "react";
 import * as bs from "react-bootstrap";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import AppContext from './context'
 
 export default function Details(props) {
   const state = React.useContext(AppContext)
-
   let { id } = useParams();
   let product = {}
   const [ImgIdx, setImgIdx] = React.useState(1);
   
 
   state.products.forEach((p, index) => {
-    /* eslint-disable-next-line */
-    if (p.id == id)
+    if (p.id === parseInt(id))
     {
       product = p
       product.key = {index}
@@ -76,13 +74,15 @@ export default function Details(props) {
           </bs.Col>
           
         </bs.Col>
-        <bs.Button
-          variant = "warning"
-          onClick= {e => {
-            state.addToCart(product.id)
-          }}>
-            Add To Cart
-        </bs.Button>
+        <Link to='/cart'>
+          <bs.Button
+            variant = "warning"
+            onClick= {e => {
+              state.addToCart(product.id)
+            }}>
+              Add To Cart
+          </bs.Button>
+        </Link>
       </bs.Row>
     </div>
   );

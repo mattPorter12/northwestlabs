@@ -8,7 +8,7 @@ function RightContainer(props) {
     return (
         <bs.Container>
             <bs.Row>
-                <h2>Recent:</h2>
+                <h1>Recent:</h1>
                 {/* <ul>
                     <li>
                         Melamine

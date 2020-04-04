@@ -9,6 +9,9 @@ import Help from './help'
 import About from './about'
 import RightContainer from './right-container'
 import Details from './details'
+import Cart from './cart'
+import Checkout from './checkout'
+import Thanks from './thanks'
 
 function App(props) {
   return (
@@ -40,6 +43,15 @@ function App(props) {
               <Route path='/product/:id'>
                 <Details />
               </Route>
+              <Route path='/cart'>
+                <Cart />
+              </Route>
+              <Route path='/checkout'>
+                <Checkout />
+              </Route>
+              <Route path='/thanks'>
+                <Thanks />
+              </Route>             
             </Switch>
           </bs.Col>
           <bs.Col md='2' className="border-left border-info px-3 py-2" style={{ backgroundColor: "white" }} >

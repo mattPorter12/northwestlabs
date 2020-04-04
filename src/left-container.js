@@ -25,6 +25,8 @@ export default function LeftContainer() {
     }
   })
 
+  
+
   function getCategoryNameFromId(id) {
     /* eslint-disable-next-line */
     return state.categories.filter((c) => c.id == id)[0].title;
